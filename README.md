@@ -1,87 +1,88 @@
 # Movie-Recommendation-System
 
-#Problem Statement
+🚀 Movie Recommendation System
 
-With so many movies available today, it becomes difficult for users to decide what to watch. The goal of this project is to build a simple movie recommendation system that suggests movies similar to a given movie based on its content.
+A content-based movie recommendation system that suggests similar movies based on user input using machine learning techniques.
 
-#Dataset
+📌 Overview
 
-The dataset used in this project is the TMDB 5000 Movies Dataset from Kaggle.
-It contains information such as:
+This project aims to replicate how platforms like Netflix recommend movies by analyzing the content of movies. When a user enters a movie name, the system recommends a list of similar movies based on their genres and descriptions.
 
+🎯 Objective
+To build a recommendation system using content-based filtering
+To understand how similarity between items can be used for recommendations
+To apply basic machine learning concepts to a real-world problem
 
-Movie title
+📊 Dataset
 
+The project uses the TMDB 5000 Movies dataset from Kaggle.
 
-Genres
+Features used:
+Title – Name of the movie
+Genres – Categories of the movie
+Overview – Short description of the movie
 
+Only these relevant columns were used to build the model.
 
-Overview (short description of the movie)
+⚙️ Approach
 
+This system is based on a content-based filtering approach, where recommendations are made by finding similarities between movies.
 
-For simplicity, only the relevant columns (title, genres, overview) were used.
-
-#Approach
-
-This project uses a content-based recommendation approach.
-Instead of using ratings or user data, it recommends movies based on their similarity in content.
-Steps followed:
-
-
-Selected important features like genres and overview
-
-
-Combined them into a single text column called “tags”
-
-
-Converted text data into numerical form using CountVectorizer
-
-
+Steps involved:
+Combined genres and overview into a single text feature
+Converted text data into numerical format using vectorization
 Calculated similarity between movies using cosine similarity
+Retrieved top 5 similar movies based on similarity score
 
+🧠 How It Works
+User enters a movie name
+The system searches for the movie in the dataset
+It compares the selected movie with all other movies
+Returns the top 5 most similar movies
 
-Recommended top 5 similar movies based on similarity score
+📈 Example Output
 
+Input:
 
+Titanic
 
-#Tech Stack
+Output:
 
+- Romeo + Juliet  
+- The Notebook  
+- Pearl Harbor  
+- A Walk to Remember  
+- The Great Gatsby  
 
+🛠️ Tech Stack
 Python
+Pandas
+Scikit-learn
+VS Code (development environment)
 
+💡 Key Learnings
+Understanding how recommendation systems work
+Converting text data into numerical form (vectorization)
+Using cosine similarity to measure similarity
+Applying machine learning concepts to real-world applications
 
-Pandas (for data handling)
+🚀 Future Improvements
+To add collaborative filtering for better recommendations
+To build a web interface using Flask or Streamlit
+To Improve recommendations using more features (cast, director, etc.)
 
+📎 How to Run the Project
+Clone the repository:
+git clone https://github.com/Tanishka-418/Movie-Recommendation-System.git
+Install dependencies:
+pip install pandas scikit-learn
+Run the Python file:
+python app.py
+Enter a movie name and get recommendations 🎬
 
-Scikit-learn (for vectorization and similarity calculation)
+🙌 Conclusion
 
-
-
-#Result
-
-The system successfully recommends 5 movies similar to the input movie.
-Example:
-
-Enter a movie name: Titanic
-Captain Phillips
-Raise the Titanic
-The Curious Case of Benjamin Button
-The Switch
-Code 46
-
-#What I Learned
-
-
-Basics of working with datasets using Pandas
-
-
-How text data can be converted into numerical form
-
-
-Concept of similarity in machine learning
-
-
-How recommendation systems work at a basic level
+This project demonstrates how machine learning can be used to build intelligent systems that enhance user experience by providing personalized recommendations.
 
 
 
